@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Bin</title>
+  <style>
+    body {background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;}
+    header, footer {background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      width: 100%;}
+    .profile-img {width: 100px;
+      border-radius: 50%;}
+    .menu .item img {width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;}
+    .menu ul {list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;}
+    .menu li {margin: 10px;}
+    .price {font-weight: bold;
+      color: #e91e63;}
+    form {display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 0 auto;}
+    label, input, select, button {margin-bottom: 10px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>주먹밥 천국</h1>
+  </header>
+  <main>
+    <section class="menu">
+      <h2>메뉴</h2>
+      <ul>
+        <li>
+          <div class="item">
+            <img class="profile-img" src="https://i.imgur.com/8Y4Wicv.jpg" alt="김치 주먹밥">
+            <h3>김치 주먹밥</h3>
+            <p>달콤짭짤한 김치와 쫄깃한 밥이 어우러진 인기 메뉴입니다.</p>
+            <span class="price">2,500원</span>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <img class="profile-img" src="https://i.imgur.com/UpUYopP.jpg" alt="참치 주먹밥">
+            <h3>참치 주먹밥</h3>
+            <p>고소한 참치와 마요네즈가 조화를 이루는 메뉴입니다.</p>
+            <span class="price">3,000원</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="order">
+      <h2>주문하기</h2>
+      <form action="#">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">전화번호:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="menu">메뉴 선택:</label>
+        <select id="menu" name="menu" required>
+          <option value="">선택하세요</option>
+          <option value="kimchi">김치 주먹밥</option>
+          <option value="tuna">참치 주먹밥</option>
+        </select>
+
+        <label for="quantity">개수:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+        <button type="submit">주문하기</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 주먹밥 천국</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
